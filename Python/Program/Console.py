@@ -6,10 +6,7 @@ class Console(Product):
         super().__init__(productID, tokoID, nama, harga, stok)
         self._brand = brand
         self._storage = storage
-
-    def __del__(self):
-        super().__del__()
-
+        
     # ---------- Getter ----------
     def getBrand(self):
         return self._brand

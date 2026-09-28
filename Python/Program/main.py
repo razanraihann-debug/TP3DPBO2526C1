@@ -103,14 +103,5 @@ def main():
     print("\n--- Struk SESUDAH ditambah item ---")
     trx3.printInfo()
 
-    print("\n----- Proses Destruction (otomatis saat main() selesai) -----")
-    # Di C++ objek dihancurkan otomatis dengan urutan terbalik dari deklarasi.
-    # Di Python urutan itu dibuat eksplisit dengan del. Nama game/console/acc dilepas
-    # dulu supaya GameStore (pemilik) yang menghancurkan produk-produknya.
-    del trx3, cust3, game3, console3, acc3, store3
-    del trx2, cust2, game2, console2, acc2, store2
-    del trx1, cust1, game1, console1, acc1, store1
-
-
 if __name__ == "__main__":
     main()

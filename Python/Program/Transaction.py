@@ -10,11 +10,7 @@ class Transaction:
         self._tanggal = tanggal
         self._totalBayar = 0
         self._details = []
-
-    def __del__(self):
-        while len(self._details) > 0:
-            self._details.pop(0)
-
+        
     def tambahDetail(self, produk, jumlah):  # data ditambahkan secara statis dari main
         d = TransactionDetail(self._transactionID, produk, jumlah)
         self._totalBayar += d.getSubTotal()

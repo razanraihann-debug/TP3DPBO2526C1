@@ -6,10 +6,7 @@ class Accessory(Product):
         super().__init__(productID, tokoID, nama, harga, stok)
         self._jenis = jenis
         self._kompabilitas = kompabilitas
-
-    def __del__(self):
-        super().__del__()
-
+        
     # ---------- Getter ----------
     def getJenis(self):
         return self._jenis

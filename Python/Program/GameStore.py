@@ -7,12 +7,7 @@ class GameStore:
         self._namaToko = namaToko
         self._lokasi = lokasi
         self._daftarProduk = []
-
-    def __del__(self):
-        # pop(0) berulang: produk dilepas & dihancurkan satu per satu dari yang pertama
-        while len(self._daftarProduk) > 0:
-            self._daftarProduk.pop(0)
-
+        
     def tambahProduk(self, p):  # data ditambahkan secara statis dari main
         self._daftarProduk.append(p)
 

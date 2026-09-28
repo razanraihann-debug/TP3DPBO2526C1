@@ -6,10 +6,7 @@ class Game(Product):
         super().__init__(productID, tokoID, nama, harga, stok)
         self._genre = genre
         self._platform = platform
-
-    def __del__(self):
-        super().__del__()  # lalu destructor Product (sama seperti urutan di C++)
-
+        
     # ---------- Getter ----------
     def getGenre(self):
         return self._genre
