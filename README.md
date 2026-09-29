@@ -109,6 +109,30 @@ Saya Razan Raihan Malik dengan NIM 2508838 mengerjakan Tugas Praktikum 3 pada Ma
 - Association: TransactionDetail → Product (banyak : 1)
 
 # FLOW CODE
+  Flow code main()
+  - Mulai program
+  Fungsi main() dijalankan.
+  - Diulang untuk GameStore 1, 2, dan 3 (isi tiap perulangan sama, hanya datanya beda)
+  Buat 3 objek Product dengan new: Game, Console, Accessory.
+  Buat objek GameStore kosong, lalu isi tokoID, namaToko, lokasi lewat setter.
+  tambahProduk() dipanggil 2 kali: masukkan Game dan Console ke daftarProduk.
+  printInfo() dipanggil pada GameStore → cetak katalog SEBELUM Accessory ditambahkan.
+  tambahProduk() dipanggil sekali lagi: masukkan Accessory.
+  printInfo() dipanggil lagi pada GameStore → cetak katalog SESUDAH Accessory ditambahkan.
+  Buat objek Customer.
+  printInfo() dipanggil pada Customer → cetak data pelanggan.
+  Buat objek Transaction, lalu tambahDetail() dipanggil sekali: masukkan 1 item pertama.
+  printInfo() dipanggil pada Transaction → cetak struk SEBELUM item kedua ditambahkan.
+  tambahDetail() dipanggil lagi: masukkan item kedua.
+  printInfo() dipanggil lagi pada Transaction → cetak struk SESUDAH item kedua ditambahkan.
+  - Destruction (di akhir main)
+  Setiap variabel lokal dihapus otomatis dengan urutan terbalik dari deklarasi.
+  Untuk tiap toko: Transaction dihapus dulu (destructor Transaction ikut menghapus semua TransactionDetail miliknya).
+  Lalu Customer dihapus.
+  Lalu GameStore dihapus (destructor GameStore ikut menghapus semua Product miliknya: Game, Console, Accessory — destructor anak jalan dulu, baru destructor Product karena   virtual).
+  Urutan penghapusan toko: GameStore 3 → GameStore 2 → GameStore 1 (kebalikan urutan pembuatan).
+  - Program selesai
+  return 0.
 
 # DOKUMENTASI
 # CPP
